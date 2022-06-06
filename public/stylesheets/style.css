@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/* GAME INTRO */
+.intro{
+    width: 500px;
+    min-height: 500px;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro p{
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.intro img{
+    padding-top: 30px;
+    width: 250px;
+    padding-bottom: 10px;
+}
+
+.intro button{
+    background-color: #007a04;
+    border: none;
+    border-radius: 3px;
+    font-size: 32px;
+    width: 400px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+/* GAME CSS */
+.desligaTela{
+    display: none;
+}
+
+.game-screen{
+    background: linear-gradient(#B7CEEB, #E0F6FF);
+    width: 500px;
+    min-height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    animation: pipe-animation 1s infinite linear;
+}
+
+.mario{
+    position: absolute;
+    width: 80px;
+    bottom: 0px;
+}
+
+.jump{
+    animation: mario-jump 500ms ease-out;
+}
+
+.floor{
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    background-image: url("../assets/floor4.png");
+    border: 1px solid black;
+}
+
+.clouds{
+    position: absolute;
+    margin-top: 10px;
+    width: 450px;
+    animation: clouds-animation 30s infinite linear;
+}
+
+.score{
+    width: 100%;
+    min-height: 60px;
+    background: black;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.scoreCounter{
+    display: flex;
+
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.scoreValue{
+    margin-left: 5px;
+}
+
+.bestSCore{
+    display: flex;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.bestScoreValue{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#desligaTela{
+    display: none;
+}
+
+.lose-screen{
+    position: absolute;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    background: black;
+    margin-top: 25%;
+    margin-left: 31%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.lose-screen p{
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.lose-screen button{
+    height: 40px;
+    width: 150px;
+    margin: 3px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #007a04;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer
+
+}   
+
+
+
+/* Animações */
+@keyframes pipe-animation {
+    from{
+        right: -50px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes mario-jump{
+    0%{
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -450px;
+    }
+
+    to{
+        right: 100%;
+    }
+}

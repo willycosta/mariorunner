@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="shortcut icon" href="public/assets/icon.png" type="image/x-icon">
+    <title>Mario Runner</title>
+</head>
+<body>
+    <main>
+        <!--START SCREEN-->
+        <div class="intro">
+            <p>Mario Runner</p>
+            <img src="./public/assets/marioIntro.png" draggable="false">
+            <button onclick="PlayGame()">Iniciar</button>
+        </div>
+        <!--GAME SCREEN-->
+        <div class="gameScreen desligaTela">
+            <div class="game-screen">
+                <div class="score">
+                    <div class="scoreCounter">
+                        <p>Score:<p id="scoreValue" class="scoreValue">0</p></p>
+                    </div>
+                    <div class="bestSCore">
+                        <p>Best Score: <p id="bestScoreValue" class="bestScoreValue">0</p></p>
+                    </div>
+                </div>
+
+                <!--LOSE SCREEN-->
+                <div class="lose-screen"> 
+                    <p>Você Perdeu!</p>
+                    <button onclick="restart();">Restart</button>  
+                    <a href="/"><button>Novo Jogo</button></a>                
+                </div>
+                <img src="/public/assets/mario2.gif" class="mario" draggable="false">
+                <img src="./public/assets/pipe.png" id="pipe" class="pipe" draggable="false"> 
+                <img src="./public/assets/clouds.png" class="clouds" draggable="false"> 
+            </div>
+            <div class="floor">
+            </div>
+        </div>
+    </main>    
+    <script src="/public/javascripts/scripts.js"></script>
+</body>
+</html>
