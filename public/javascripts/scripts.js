@@ -57,7 +57,6 @@ function PlayGame(){
             mario.style.marginLeft = "15px";
             clouds.style.animation = "none";
             clouds.style.right = `${cloudsPosition}px`; 
-
             //PLAAY DEATH SONG
             let effectDeath = new Audio('./public/assets/lose.mp3');
             effectDeath.addEventListener('canplaythrough', () =>{
@@ -75,6 +74,30 @@ function PlayGame(){
         if(score > 1){
             bestScore.push(score);
         }
+
+
+        //REGRA AUMENTO DE VELOCIDADE DOS TUBOS
+        if(score == 5){
+            pipe.style.left = "500px";
+            pipe.style.animation = "pipe-animation 900ms infinite linear";
+            pipe.style.left = "";
+        }
+        if(score == 10){
+            pipe.style.left = "500px";
+            pipe.style.animation = "pipe-animation 800ms infinite linear";
+            pipe.style.left = "";
+        }
+        if(score == 15){
+            pipe.style.left = "500px";
+            pipe.style.animation = "pipe-animation 700ms infinite linear";
+            pipe.style.left = "";
+        }
+        if(score == 20){
+            pipe.style.left = "500px";
+            pipe.style.animation = "pipe-animation 600ms infinite linear";
+            pipe.style.left = "";
+        }
+
     }, 10)
 
 }
